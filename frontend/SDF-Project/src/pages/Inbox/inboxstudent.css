@@ -1,0 +1,15 @@
+.inbox-student{
+    position: absolute;
+    top: 0;
+    /* margin-top: 0;
+    padding-top: 0; */
+}
+
+.main-content-inbox-student{
+    position: absolute;
+    top: -30px;
+    /* margin-top: 0px; */
+    padding-right: 20px;
+    /* padding-top: -100px; */
+    padding-left: 80px;
+}

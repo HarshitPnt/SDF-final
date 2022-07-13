@@ -1,0 +1,385 @@
+.App {
+  text-align: center;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+#buttons{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#buttons button{
+  padding: 18px 16px;
+  font-size: large;
+  background-color: #5FC3E4;
+  border-radius: 15px;
+}
+
+#buttons button:hover{
+  background-color: #2eb1dd;
+}
+
+#buttons button:active{
+  background-color: #026788;
+}
+
+
+#Nav-bar{
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+#Nav-bar ul{
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0px;
+  left: 0;
+  white-space: nowrap;
+  padding: 25px, 20px;
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+#Nav-bar li{
+  display: inline;
+  float: left;
+  width: 25%;
+}
+
+#Nav-bar li a{
+  font-size: 25px;
+  display: block;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#Nav-bar li a:hover{
+  background-color: #111;
+}
+
+#Nav-bar li a.active{
+  background-color: #4caf50;
+}
+
+#Nav-bar li button{
+  float: left;
+  display: block;
+  padding: 8px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+#Nav-bar li button:hover{
+  background-color: dimgray;
+}
+
+#Nav-bar li button.active{
+  background-color: lightblue;
+}
+
+
+#home h1{
+  text-align: center;
+}
+
+#home p{
+  text-align: center;
+  font-size: large;
+}
+
+#home h2{
+  text-align: center;
+}
+
+#courses h1{
+  text-align: center;
+}
+
+#search{
+  text-align: center;
+  font-size: large;
+}
+
+#search input{
+  padding: 5px 20px;
+  font-size: 25px;
+  border-radius: 25px;
+  border: 2px solid burlywood;
+  margin: 25px 10px;
+  border-radius: 10px;
+  size: 500px;
+}
+
+#search label{
+  font-size: 20px;
+}
+
+#search input:hover{
+  border: 2px solid #e49227;
+}
+
+section::before{
+  content: "";
+  position: relative;
+  background: linear-gradient(#DA22FF, #9733EE);
+  clip-path: circle(30% at right 70%);
+}
+
+section::after{
+  content: "";
+  position: relative;
+  background: linear-gradient(#E55D87, #5FC3E4);
+  clip-path: circle(20% at 10% 10%);
+}
+
+.container{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.container .course-card{
+  position: relative;
+  width: 360px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.05);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.container .course-card .content{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.container .course-card:hover .content{
+  transform: translateY(-20px);
+}
+
+.container .course-card .content .imgBx{
+  position: relative;
+  width: 350px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.container .course-card .content .imgBx img{
+  position: relative;
+  /* width: 100%;
+  height: 100%; */
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.container .course-card .content .contentBx h3{
+  color: black;
+  letter-spacing: 1.5px;
+  text-align: center;
+  line-height: 1.1em;
+  margin: 20px 0 10px;
+}
+
+.container .course-card .enroll{
+  font-size: large;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container .course-card:hover .enroll{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container .course-card .enroll button{
+  font-size: 25px;
+  border-radius: 15px;
+  align-self: center;
+}
+
+.container .course-card:active{
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  background-color: lightblue;
+}
+
+#about h1{
+  text-align: center;
+}
+
+#about p{
+  text-align: center;
+  font-size: 20px;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.row{
+  padding-left: 325px;
+  align-items: center;
+}
+
+.row .column{
+  display: inline-flex;
+  align-items: center;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.row .column .card{
+  background-color: burlywood;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  /* marg.row .column .cardin: 8px; */
+  width: 80%;
+  border-radius: 25px;
+}
+
+.row .column .card img{
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.row .column .card .container {
+  padding: 0px 30px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#contact{
+  text-align: center;
+  background-color: gray;
+}
+
+form input{
+  resize: vertical;
+  margin: 0px 0;
+  padding: 10px 20px;
+  font-size: 25px;
+  border-radius: 25px;
+  border: 2px solid burlywood;
+}
+
+textarea{
+  margin: 0px 0;
+  padding: 10px 20px;
+  font-size: 25px;
+  border-radius: 25px;
+  border: 2px solid burlywood;
+}
+
+#contact input{
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  padding: 10px 10px;
+  border: 2px solid burlywood;
+  color: #111;
+}
+
+#contact input:hover{
+  border: 2px solid #e49227;
+}
+
+#contact label{
+  font-size: 20px;
+}
+
+#dshbd{
+  position: absolute;
+  right: 1650px;
+  background-color: #2e48dd;
+}
+
+@media screen and (max-width: 1700px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+  .container {
+      width: 100%;
+      display: block;
+  }
+  .row{
+    padding-left: 10px;
+    display: block;
+  }
+}

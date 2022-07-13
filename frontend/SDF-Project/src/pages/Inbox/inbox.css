@@ -1,0 +1,79 @@
+.inbox-content{
+    padding-left: 160px;
+}
+
+.main-content-inbox{
+    margin-top: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.inbox-header{
+    margin-top: 90px;
+    color: grey;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.bold-text{
+    color: black;
+    font-weight:bolder;
+    opacity: 130%;
+}
+
+.read-text{
+    color: rgb(69, 67, 67);
+    font-weight: light;
+    opacity: 80%;
+}
+
+.Delete-button{
+    width: 70px;
+    height: 40px;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.Delete-button:hover{
+    background-color: rgb(152, 2, 2);
+}
+
+.Reply-button{
+    width: 70px;
+    height: 40px;
+    background-color: teal;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.Reply-button:hover{
+    background-color: rgb(0, 80, 80);
+}
+
+.Action-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.mycomp{
+    padding-left:6.5%;
+    font-size: 20px;
+    color: rgb(37, 16, 16);
+}
+
+.Message-title{
+    color: grey;
+    font-size: 25px;
+    padding-left: -2.5%;;
+}
+
+.compose-area{
+    display: inline-block;
+    width: 50%;
+    position: absolute;
+    right: 20%;
+    top: 20%;
+}

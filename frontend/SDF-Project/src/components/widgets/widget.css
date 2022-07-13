@@ -1,0 +1,91 @@
+
+.content{
+    display: flex;
+    transition: transform .7s; /*animation*/
+    justify-content: space-between;
+    flex: 1;
+    padding: 30px;
+    margin-left:40px;
+    margin-right:100px;
+    height: 200px;
+    border-radius: 6%;
+    box-shadow: 7px 14px 21px 1px rgba(15,1,1,0.55);
+    -webkit-box-shadow: 7px 14px 21px 1px rgba(15,1,1,0.55);
+    -moz-box-shadow: 7px 14px 21px 1px rgba(15,1,1,0.55);
+
+}
+
+/* .content:hover{
+    animation: pop 0.3s linear 1;
+    animation-fill-mode: both;
+}
+
+@keyframes pop{
+    50%  {transform: scale(1.2);}
+  } */
+
+.content:hover{
+    transform: scale(1.2);
+}
+
+.left-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.Right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.number{
+    margin-left:20px;
+}
+
+.icon{
+    display: flex;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+    background-color: #f99fed;
+}
+
+.User{
+    font-size: 20px;
+    color: rgb(108, 106, 106);
+}
+
+.count{
+    font-size:xx-large;
+    color: rgb(56, 41, 41);
+}
+
+.link{
+    border-bottom: 2px solid black;
+    width: max-content;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.link:hover{
+    background-color: aqua;
+}
+
+.color2{
+    background-color: blanchedalmond;
+}
+
+.color3{
+    background-color: aqua;
+}
+

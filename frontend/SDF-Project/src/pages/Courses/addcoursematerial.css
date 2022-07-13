@@ -1,0 +1,72 @@
+.main-page-add-material{
+    padding-left: 160px;
+}
+
+.page-content-add-material{
+    padding-top: 60px;
+}
+
+.course-material-add-title{
+    color: grey;
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-size: 45px; 
+    font-weight: normal; 
+    line-height: 48px; 
+    padding-left: 60px;
+    padding-top: 20px;
+    text-align: start;
+}
+
+.add-material{
+    margin-top: 40px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 200px;
+}
+
+.left-add-material{
+    width: 40%;
+    padding-left: 80px;
+}
+.right-add-material{
+    width: 40%;
+    padding-right: 80px;
+}
+
+.add-margin{
+    position: relative;
+    bottom: -30px;
+    right: 55px;
+}
+
+.add-margin-2{
+    position: relative;
+    bottom: -30px;
+    right: 75px;
+}
+
+
+.form-add-material-options{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start; 
+}
+
+#file-2{
+    display: none;
+    }
+
+.add-material-title{
+    color: grey;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn-send-material-real{
+    position: relative;
+    left: 595px; 
+
+}
+            

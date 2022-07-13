@@ -1,0 +1,19 @@
+.main-content-compose{
+    padding-left: 160px;
+}
+
+.page-content-compose{
+    margin-top: 60px;
+}
+
+.btn-for-send{
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+
+
+.heading-compose{
+    color: grey;
+    margin-top: 80px;
+}

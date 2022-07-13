@@ -1,0 +1,102 @@
+.page-content-user-stu{
+    padding-left: 177px;
+}
+
+.page-content-user-stu{
+    display: flex;
+    gap: 10%;
+}
+.navbar-admin{
+
+padding-left: 160px;
+}
+.welcome-stu-profile{
+    padding-left: 5%;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-size: 45px; 
+    font-weight: normal; 
+    line-height: 48px; 
+}
+
+.left-stu{
+    margin-left: 10%;
+    margin-top: 2%;
+    width: 50%;
+    position: relative;
+
+} 
+
+.information-card-student{
+    display: flex;
+    justify-content: space-between;
+    height: 460px;
+    border-radius: 3%;
+    -webkit-box-shadow: 10px 14px 33px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 14px 33px -4px rgba(0,0,0,0.75);
+    box-shadow: 10px 14px 33px -4px rgba(0,0,0,0.75);
+    /* position: relative; */
+}
+
+.right-stu{
+    width: 40%;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+.info-stu{
+    color: grey;
+    margin-top: 40px;
+    /* position: relative; */
+}
+
+.profile-picture-stu{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20%;
+    right: 75%;
+}
+
+.profile-picture-stu-title{
+    color: grey;
+    position: absolute;
+    bottom: 30%;
+    font-size: 20px;
+    left: 7.7%;
+    /* position: relative; */
+}
+
+.info-right-stu{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12%;
+    /* margin-right: 20%; */
+}
+.title-stu-info{
+    font-size: 20px;
+}
+
+.entry-stu-info{
+    font-size: 20px;
+}
+
+.message-stu{
+    margin-top: 40px;
+    padding-left: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.custom-width-message{
+    width: 48%;
+}

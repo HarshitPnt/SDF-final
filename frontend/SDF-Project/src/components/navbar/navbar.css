@@ -1,0 +1,60 @@
+.navbar{
+    display: flex;
+    height: 77px;
+    border-bottom: 2px solid green;
+    position: fixed;
+    background-color: black;
+     z-index: 5;
+    top: 0;
+    /* left: 160px; */
+}
+
+.wrapper{
+    width: 92%;
+    padding: 10px;
+    top: 0;
+    position: fixed;
+    background-color: rgb(239, 165, 140);
+    padding-left: 10px;
+    display: flex;
+    /* left: 160px; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.items{
+    display: flex;
+}
+
+.item{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.field-text{
+    background-color: rgb(238, 234, 234);
+    margin-right: 20px;
+    border: 2px solid black;
+}
+
+.search{
+    display: flex;
+    position: relative;
+}
+
+.search-icon{
+margin-left: -20px;
+}
+
+.Chat-icon-navbar{
+    cursor: pointer;
+}
+
+.Chat-icon-navbar:hover{
+    background-color: rgb(119, 70, 45);
+}

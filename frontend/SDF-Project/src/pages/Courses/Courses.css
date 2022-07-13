@@ -1,0 +1,40 @@
+.top-course{
+    padding-left: 160px;
+}
+
+.pagecontent-course{
+    margin-top: 60px;
+}
+
+.title-course{
+    text-align: center;
+    color: grey;
+    font-weight: bold;
+}
+
+.Deactivate{
+    border: none;
+    background-color: red;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+    margin-right: 25px;
+}
+
+.Deactivate:hover{
+    background-color: rgb(161, 4, 4);
+}
+
+.View-courses{
+    border: none;
+    background-color: teal;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+}
+
+.View-courses:hover{
+    background-color: rgb(1, 72, 72);
+}

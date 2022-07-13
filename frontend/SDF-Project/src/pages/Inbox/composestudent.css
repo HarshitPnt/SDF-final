@@ -1,0 +1,28 @@
+.compose-inbox-student{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.main-content-compose-student{
+    padding-left: 260px;
+    position: absolute;
+    /* left: 20%; */
+    width: 100%;
+}
+
+.page-content-compose-student{
+    margin-top: 20px;
+}
+
+.heading-compose-student{
+    color: grey;
+    margin-top: 50px;
+}
+
+.compose-area-student{
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    width: 50%;
+}

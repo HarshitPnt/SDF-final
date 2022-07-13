@@ -1,0 +1,26 @@
+/* .course-img{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 500px;
+    height: 400px;
+    border-width: 2px;
+    border-radius: 25px;
+    border-color: black;
+} */
+
+/* #Course_Image{
+    position: absolute;
+    left: 30%;
+} */
+
+#Card-Big{
+    position: absolute;
+    top: 27%;
+    width: 80%;
+    left: 9%;
+}
+
+#Course_Content p{
+    font-size: 20px;
+}

@@ -1,0 +1,63 @@
+.field{
+    width: 30%;
+    font-size: 100px;
+}
+.username-field{
+    margin-left: 10%;
+}
+.password-field{
+    margin-left: 10.50%;
+}
+h1{
+    text-align: center;
+}
+.center{
+    display: inline-block;
+    width: 50%;
+    margin-left: 30%;
+}
+.margin-btn{
+    display: inline-block;
+    margin-top: 2%;
+    margin-right:5%;
+}
+
+.margin-btn-2{
+    display: inline-block;
+    margin-top: 2%;
+}
+.link{
+    margin-top: 4%;
+}
+.noAccount{
+    display: inline-block;
+    margin: 2% 0 0 35%;
+}
+.btn-center{
+    margin-left: 30%;    
+}
+.top{
+    margin-top: -1%;
+    width: 35%;
+    height: 38rem;
+    background-color: white;
+    box-shadow: 5px 10px #888888;
+    border-radius: 10%;
+    
+}
+.second{
+    margin-top: 8%;
+}
+i{
+    padding: 2%;
+    border: 1px solid black;
+}
+.login{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3%;
+    width: 200%;
+    margin-left: 24%;
+}
+}

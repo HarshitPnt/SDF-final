@@ -1,0 +1,44 @@
+.header{
+    display: inline-block;
+    margin: 8% 0 0 60%;
+    width:40%;
+}
+.ib{
+    display: inline-block;
+}
+.createProfile{
+    display:inline-block;
+    margin-left:10%;
+}
+.noAccount{
+    display: inline-block;
+}
+.form-login{
+    width:45%;
+    height: 100px;
+    margin:10% auto 1% auto;
+    position: relative;
+}
+.altSignIn{
+    width:45%;
+    margin: 2% auto;
+}
+.login{
+    margin: 0;
+    position: relative;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-top:3%;
+}
+
+img{
+    position: realtive;
+    margin-left: 48%;
+    margin-top:5%
+}
+.forgotPass{
+    position:relative;
+    margin:0 40%;
+    
+}

@@ -1,0 +1,66 @@
+.side-display{
+    float: left;
+    font-size: 20px;
+    display: inline;
+    width: 20%;
+    height: 100%;
+}
+
+.side-display ul{
+    /* display: block; */
+    width: 20%;
+    float: left;
+    height: 100%;
+}
+
+.side-display li{
+    float: left;
+    width: 100%;
+    background-color: rgb(187, 125, 245);
+    color: rgb(91, 14, 163);
+}
+
+.file{
+    position: absolute;
+    top: 250px;
+    left: 550px;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    float: inline-end;
+}
+
+
+.react-pdf__Page {
+    margin-top: 10px;
+}
+
+.react-pdf__Page__textContent {
+    border: 1px solid darkgrey;
+    box-shadow: 5px 5px 5px 1px #ccc;
+    border-radius: 5px;
+}
+/*
+.react-pdf__Page__annotations.annotationLayer {
+    padding: 20px;
+}
+ 
+*/
+
+.react-pdf__Page__canvas {
+    margin: 0 auto;
+} 
+
+.all-page-container{
+    width: 1000px;
+    max-height: 600px;
+    overflow: scroll;
+}
+  
+  /* For all pages */
+/* .all-page-container {
+    height: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
+   */

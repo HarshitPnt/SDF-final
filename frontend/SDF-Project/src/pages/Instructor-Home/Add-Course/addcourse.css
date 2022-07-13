@@ -1,0 +1,71 @@
+.main-content-add-new{
+    padding-left: 160px;
+}
+
+.page-content-add-new{
+    padding-top: 70px;
+}
+
+.post-header{
+    color: grey;
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-size: 45px; 
+    font-weight: normal; 
+    line-height: 48px; 
+    padding-left: 60px;
+    padding-top: 20px;
+    text-align: start;
+}
+.form-new-course{
+    padding-top: 40px;
+    display: flex;
+    gap: 220px;
+}
+
+.left-new-course{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.right-new-course{
+    flex: 1;
+    padding-right: 20px;
+}
+
+.item-label-add-new{
+    color: rgb(80, 71, 71);
+    font-size: 20px;
+}
+
+.form-item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.btn-send-new{
+    position: relative;
+}
+
+.custom-btn-send{
+    position: absolute;
+    right: 0px;
+}
+
+.btn-container-send{
+    position: absolute;
+    right: 0px;
+}
+
+.course-dec-label{
+    font-size: 20px;
+    color: #7c795d;
+}
+
+.course-desc-text{
+    font-size: 16px;
+    
+}

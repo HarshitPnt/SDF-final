@@ -1,0 +1,122 @@
+.container-course{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+  }
+  
+  .container-course .course-card{
+    position: relative;
+    width: 360px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .container-course .course-card .content-course-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+  }
+  
+  .container-course .course-card:hover .content-course-card{
+    transform: translateY(-20px);
+  }
+  
+  .container-course .course-card .content-couurse-card .imgBx{
+    position: relative;
+    width: 350px;
+    height: 240px;
+    overflow: hidden;
+  }
+  
+  .container-course .course-card .content-course-card .imgBx img{
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .container-course .course-card .content-course-card .contentBx h3{
+    color: black;
+    letter-spacing: 1.5px;
+    text-align: center;
+    line-height: 1.1em;
+    margin: 20px 0 10px;
+  }
+  
+  .container-course .course-card .enroll{
+    font-size: large;
+    margin: 0 10px;
+    transform: translateY(10px);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  .container-course .course-card:hover .enroll{
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  
+  .enroll{
+    background-color: teal;
+    border: none;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .enroll:hover{
+    background-color: rgb(0, 72, 72);
+  }
+  
+  .container .course-card:active{
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-color: lightblue;
+  }
+  .image-course{
+    position: absolute;
+    right: 96px;
+    top: -5px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.progress{
+    display: flex;
+    /* justify-content: end; */
+    gap: 20px;
+    align-items: center;
+    height: 60px;
+    background-color: #F2F2F2;
+}
+
+.progress-chart{
+    height: 60px;
+    width: 60px;
+}
+.current-title{
+    margin-top: 15px;
+    font-size: 19px;
+}
+
+/* .resume-bar{
+    display: flex;
+    width: 200vh;
+    overflow-x: hidden;
+} */

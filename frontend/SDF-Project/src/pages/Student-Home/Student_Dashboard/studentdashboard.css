@@ -1,0 +1,82 @@
+.stu-dash{
+    display: flex;
+}
+
+.content-stu-dash{
+    padding-left: 175px;
+    width : 100%
+}
+
+.welcome-stu-dash{
+    padding-left: 5%;
+    width: 100%;
+    text-align: center;
+    padding-top: 3.55%;
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-size: 45px; 
+    font-weight: normal; 
+    line-height: 48px; 
+    margin: 0; 
+}
+
+.resume-title{
+    padding-left: 5.5%;
+    width: 100%;
+    text-align: start;
+    margin-top: 50px;
+    color: #827b39;
+    font-family: 'Oleo Script', cursive;
+    font-size: 30px;
+    font-weight: normal; line-height: 32px; 
+    text-shadow: 1px 0 0 #fff; 
+}
+
+.resume-bar{
+    padding-left: 5.5%;
+    display: flex;
+    overflow-x: hidden;
+    width: 200vh;
+}
+
+.arrows{
+    position: relative;
+    display: flex;
+    gap: 97%;
+    top: -270px;
+    padding-left: 5.75%;
+    padding-right: 4%;
+    /* padding-bottom: 200px; */
+}
+
+.Left-arrow{
+    cursor: pointer;
+}
+
+.Right-arrow{
+    cursor: pointer;
+}
+
+.center-box{
+    display: inline-block;
+    position: absolute;
+    left: 30%;
+    width: 50%;
+    text-align: center;
+}
+
+.recommended-bar{
+    position: absolute;
+    top: 1600px;
+    width: 200vh;
+}
+
+.recommended-title{
+    position: absolute;
+    top: 1500px
+}
+
+.rec-arrow{
+    position: relative;
+    top: 1000px;
+}

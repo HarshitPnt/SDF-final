@@ -1,0 +1,25 @@
+/* .margin-accord{
+    background-color: red;
+    margin-top: 50px;
+    width: 200vh;
+    margin-right: 0;
+    padding-right:0;
+} */
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.color{
+    background-color: rgb(229, 179, 222);
+}
+
+.color:hover{
+    background-color: gray;
+}
