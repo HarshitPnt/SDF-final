@@ -11,7 +11,7 @@ h2{
     margin-top: 2%;
     color: red;
 }
-.content{
+.content-signup{
     width: 35%;
     position: inherit;
 }
@@ -37,7 +37,7 @@ h2{
     left: 27%;
 }
 
-.login{
+.login-signup{
     padding-top:5%;
     text-align: center;
 }
@@ -78,7 +78,7 @@ a:hover{
     margin-left: 2%;
 }
 
-.form-border{
+.form-border-signup{
   border: none;
   border-bottom: 2px solid red;
   padding-left: 2%;

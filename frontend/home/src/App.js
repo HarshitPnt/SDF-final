@@ -13,8 +13,8 @@ function App() {
         </div>
         <div id="buttons">
             <button><a href='http://192.168.51.89:3001/login'>Log-in</a></button>
-            <button><a href='http://192.168.51.89:3001/login'>Sign-Up</a></button>
-            <button id='dshbd'><a href='http://192.168.51.89:3001'>Dashboard</a></button>
+            <button><a href='http://192.168.51.89:3001/signup'>Sign-Up</a></button>
+            <button id='dshbd'><a href='http://192.168.51.89:3001/62ce916f29682e3a6d945930'>Dashboard</a></button>
         </div>
         <div id="Nav-bar">
             <ul>

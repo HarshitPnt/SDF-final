@@ -58,3 +58,7 @@ margin-left: -20px;
 .Chat-icon-navbar:hover{
     background-color: rgb(119, 70, 45);
 }
+
+.profile-navbar{
+    padding-right: 100px;
+}

@@ -30,7 +30,7 @@ function IntroToC () {
                     </div>
                     <div className='course-data'>
                         <div className='course-discription'>
-                            <h2>Discription</h2>
+                            <h2>Description</h2>
                             <p>Introduction to C programming. Problem solving and algorithms. <br />
                             Input and output operations, decision control structure, loop control structure, arrays, strings, etc.
                                 <br />pointers, arrays, structures, functions, file operations.

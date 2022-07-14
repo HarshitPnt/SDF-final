@@ -10,16 +10,18 @@ function ComposeStudent({sendTo}) {
     const location=useLocation()
     const {sender,subject}=location.state
 
-    const refSender=useRef(null)
-    const refSubject=useRef(null)
-    const refMessage=useRef(null)
-
+   const refSender =useRef(null)
+   const refSubject =useRef(null)
+   const refMessage=useRef(null)
+    
     const handleSend=async()=>{
-        let response = await axios.post(`http://192.168.51.89/messages/student/${studentID}`,{
+        
+        let response = await axios.post(`http://192.168.51.89:5001/messages/student/${studentID}`,{
         "to":refSender.current.value,
         "subject":refSubject.current.value,
         "content":refMessage.current.value
         })
+     
         console.log("Sent")
     }
     const {studentID} =useParams()
@@ -41,7 +43,7 @@ function ComposeStudent({sendTo}) {
             </div>
                 <div className="mb-3">
             <label for="exampleFormControlTextarea1" className="form-label">Write A Message</label>
-            <textarea className="form-control course-description" id="exampleFormControlTextarea1"  rows="10" placeholder='Message'></textarea>
+            <textarea className="form-control course-description" id="exampleFormControlTextarea1" ref={refMessage} rows="10" placeholder='Message'></textarea>
             <div className="btn-for-send">
                <Link to={`/student/${studentID}/inbox`}><button className="btn-primary btn mx-3 px-3">Inbox</button></Link> 
                <Link to={`/student/${studentID}/inbox/sent`}><button className="btn-primary btn mx-3">Sent Items</button></Link> 

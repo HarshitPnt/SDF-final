@@ -6,6 +6,7 @@ const Course = db.collection('courses',
    is_active:0,
    start_date: "",
    end_date: "",
+   description: "",
    profs:[""]
 }, {
    freezeTableName: true

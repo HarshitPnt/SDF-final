@@ -7,8 +7,29 @@ import LineChart from '../../../components/Charts/LineChart'
 import DataTable from 'react-data-table-component'
 import CoursesDatatable from '../../../components/datatable/CoursesDatatable'
 import InstSidebar from '../../../components/InstSidebar/InstSidebar'
+import {Link,useParams,useNavigate,} from 'react-router-dom'
+import axios from 'axios'
+
 
 function InstructorDashboard() {
+const [data,setData]=useState([])
+const {instructorID}=useParams()
+const [courses,setCourses]=useState([])
+const navigate=useNavigate()
+
+  const getData=async()=>{
+    const resp=await axios.get(`http://192.168.51.89:5001/profs/${instructorID}`)
+    console.log(resp)
+    // if(resp.data.message==="Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"){
+    //   navigate('/login')
+    // }
+    let course=await axios.get(`http://192.168.51.89:5001/profs/course/${instructorID}`)
+    setCourses(course.data.crs)
+    setData(resp.data.username)
+}
+useEffect(()=>{
+  getData()
+},[])
   return (
     <div className="inst-dash">
         <div className="side-inst">
@@ -17,7 +38,7 @@ function InstructorDashboard() {
        <div className="page-content-instr">
         <Navbar/>
         <div className="main-content-inst">
-        <h1 className="welcome-inst">Welcome back Name!</h1>
+        <h1 className="welcome-inst">Welcome back {data}!</h1>
         </div>
         <div className="data-bar">
             

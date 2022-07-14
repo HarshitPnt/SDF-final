@@ -7,7 +7,7 @@ export const getAllCourses = async (req, res) => {
     console.log("getAllCourses called %s", JSON.stringify(req.params));
     try {
         const crs = await Course.find().toArray();
-        const retcrs = crs.map(item => ({ id : item._id, profs: item.profs, is_active: item.is_active, start_date: item.start_date, end_date: item.end_date}));
+        const retcrs = crs.map(item => ({ id : item._id, profs: item.profs, is_active: item.is_active, start_date: item.start_date, end_date: item.end_date, description: item.description}));
         res.json(retcrs);
     } 
     catch (error) {
@@ -52,7 +52,7 @@ export const getProfsbycourse = async (req, res) => {
     console.log("make_inactive called %s", JSON.stringify(req.params));
     try {
         const prfs = await Course.findOne({"_id": db.ObjectId(req.params.id)}).toArray();
-        const retprfs = prfs.map(item => ({ id : item._id, profs: item.profs, start_date: item.start_date, end_date: item.end_date, is_active: item.is_active}));
+        const retprfs = prfs.map(item => ({ id : item._id, profs: item.profs, start_date: item.start_date, end_date: item.end_date, is_active: item.is_active, description: item.description}));
         res.json(retprfs.prfs);
     } 
     catch (error) {
@@ -75,7 +75,7 @@ export const getAllActiveCourses = async (req, res) => {
     console.log("getAllActiveCourses called %s", JSON.stringify(req.params));
     try {
         const crs = await Course.find({"is_active": 1}).toArray();
-        const retcrs = crs.map(item => ({ id : item._id, profs: item.profs, is_active: item.is_active, start_date: item.start_date, end_date: item.end_date}));
+        const retcrs = crs.map(item => ({ id : item._id, profs: item.profs, is_active: item.is_active, start_date: item.start_date, end_date: item.end_date, description: item.description}));
         res.json(retcrs);
     } 
     catch (error) {
@@ -87,7 +87,7 @@ export const getAllInactiveCourses = async (req, res) => {
     console.log("getAllActiveCourses called %s", JSON.stringify(req.params));
     try {
         const crs = await Course.find({"is_active": 0}).toArray();
-        const retcrs = crs.map(item => ({ id : item._id, profs: item.profs, is_active: item.is_active, start_date: item.start_date, end_date: item.end_date}));
+        const retcrs = crs.map(item => ({ id : item._id, profs: item.profs, is_active: item.is_active, start_date: item.start_date, end_date: item.end_date, description: item.description}));
         res.json(retcrs);
     } 
     catch (error) {
@@ -116,6 +116,7 @@ export const counts = async (req, res) => {
 }
 
 export const new_course = async (req, res) => {
+    try{
     console.log("add new course called %s", JSON.stringify(req.params));
     const d = new Date();
     let text = d.toString();
@@ -124,7 +125,13 @@ export const new_course = async (req, res) => {
         name : req.body.name,
         is_active:1,
         start_date: dat,
+        description: req.body.description,
         end_date: req.body.end_date,
-        $push: {profs: req.params.id}
+        profs: [req.params.id]
     })
+    res.json({"message": "course added successfully"});
+    }
+    catch(error){
+        res.json({message: error.message});
+    }
 }

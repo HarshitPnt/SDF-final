@@ -25,8 +25,13 @@ function MyComponent({ data }) {
 }
 
 
+
 function SentStudent() {
 
+
+  useEffect(()=>{
+    genData()
+  },[])
   const customStyles = {
     head: {
       style: {
@@ -95,8 +100,9 @@ function SentStudent() {
     //   d[i] = { sender: `n${i}`, Subject: `s${i}`, Time: `t${i}`, messageID: `id${i}`, status: i % 2 === 0 ? "not-read" : "read", message: `m${i}` }
     // }
     // dataRef.current = d
-    const response = await axios.get(`http://192.168.51.89/messages/student/${studentID}`)
+    const response = await axios.get(`http://192.168.51.89:5001/messages/student/${studentID}`)
     setData(response.data.msg)
+    console.log(response)
   }
   const iRef = useRef(null)
   const [search, setSearch] = useState('')

@@ -15,27 +15,66 @@ export const login = async (req, res) => {
 		return res.json({ status: 'error', error: 'Invalid email/password' })
 	}
 	if(role == "student"){
-		await Student.find({email})
+		const count = await Student.find({email}).count()
+		const std = await Student.find({email}).toArray()
+		const m_id = std[0]._id;
+		const s_id = m_id.toString();
+		if( count == 0 ){
+			return res.json({"message": "invalid email/password"})
+		}
+		if (await bcrypt.compare(password, user.password)) {
+			const token = jwt.sign(
+				{
+					id: user._id,
+					email: user.email
+				},
+				secret_key
+			)
+	
+			return res.json({ status: 'ok', data: token, "id": s_id })
+		}
 	}
 	if(role == "admin"){
-		await Admin.find({email})
+		const count = await Admin.find({email}).count()
+		if( count == 0 ){
+			return res.json({"message": "invalid email/password"})
+		}
+		const std = await Admin.find({email}).toArray()
+		const m_id = std[0]._id;
+		const s_id = m_id.toString();
+		if (await bcrypt.compare(password, user.password)) {
+			const token = jwt.sign(
+				{
+					id: user._id,
+					email: user.email
+				},
+				secret_key
+			)
+	
+			return res.json({ status: 'ok', data: token, "id": s_id })
+		}
 	}
 	if(role == "instructor"){
-		await Prof.find({email})
+		const count = await Prof.find({email}).count()
+		if( count == 0 ){
+			return res.json({"message": "invalid email/password"})
+		}
+		const std = await Prof.find({email}).toArray()
+		const m_id = std[0]._id;
+		const s_id = m_id.toString();
+		if (await bcrypt.compare(password, user.password)) {
+			const token = jwt.sign(
+				{
+					id: user._id,
+					email: user.email
+				},
+				secret_key
+			)
+	
+			return res.json({ status: 'ok', data: token, "id": s_id })
+		}
 	}
-
-	if (await bcrypt.compare(password, user.password)) {
-		const token = jwt.sign(
-			{
-				id: user._id,
-				email: user.email
-			},
-			secret_key
-		)
-
-		return res.json({ status: 'ok', data: token })
-	}
-	res.json({ status: 'error', error: 'Invalid email/password' })
+	res.json({ status: 'error', error: 'Invalid email/password'})
 }
 
 export const registeradmin = async (req, res) => {
@@ -62,6 +101,12 @@ export const registeradmin = async (req, res) => {
 		})
 	}
 
+	const count = Admin.find({email}).count()
+
+	if(count > 0){
+		return res.json({ status: 'error', error: 'Email already exists' })
+	}
+
 	const password = await bcrypt.hash(original_password, 10)
 
 	try {
@@ -76,13 +121,11 @@ export const registeradmin = async (req, res) => {
 			phoneno
 		})
 
-		console.log('Registered successfully: ')
-		res.json({ status: 'ok' })
+		console.log('Registered successfully: ');
+		res.json({ status: 'ok' });
 
-	} catch (error) {
-		if (error.code === 11000) {
-			return res.json({ status: 'error', error: 'Email already exists' })
-		}
+	} 
+	catch (error) {
 		throw error
 	}
 
@@ -110,7 +153,12 @@ export const registerprof = async (req, res) => {
 			error: 'Passwords are not matching'
 		})
 	}
+	const count = Prof.find({email}).count()
 
+	if(count > 0){
+		return res.json({ status: 'error', error: 'Email already exists' })
+	}
+	
 	const password = await bcrypt.hash(original_password, 10)
 
 	try {
@@ -156,6 +204,12 @@ export const registerstudent = async (req, res) => {
 			status: 'error',
 			error: 'Passwords are not matching'
 		})
+	}
+
+	const count = Student.find({email}).count()
+
+	if(count > 0){
+		return res.json({ status: 'error', error: 'Email already exists' })
 	}
 
 	const password = await bcrypt.hash(original_password, 10)

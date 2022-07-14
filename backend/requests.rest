@@ -1,0 +1,8 @@
+POST http://localhost:5001/login
+content-type: application/json
+
+{
+    "email" : "iith@iith.ac.in",
+    "password": "12345678",
+    "role": "student"
+}

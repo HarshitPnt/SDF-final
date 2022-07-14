@@ -30,7 +30,7 @@ function DiscreteMaths() {
                     </div>
                     <div className='course-data'>
                         <div className='course-discription'>
-                            <h2>Discription</h2>
+                            <h2>Description</h2>
                             <p>This course deals with the Concept of Mathematical Proof, Logic, Proof by contradiction, Mathematical Induction,<br /> Constructive Proofs, Sets, Relations. 
                             Illustration of Proof Techniques in various mathematical topics.<br />
                             Combinatorics: Basic Counting Principles, Inclusion-Exclusion Principle, Binomial/Multinomial Coefficients,<br />

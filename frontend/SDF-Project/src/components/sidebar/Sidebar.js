@@ -54,11 +54,11 @@ function Sidebar() {
               
                 </div> 
                 </li>
-                {/* <li>
+                <li>
                 
-                <CurrencyInr size={32} color="#e22c2c" weight="duotone" /><span>Revenue</span>
+               <Link to ={`/${adminID}`}><User size={32} color="#e22c2c" weight="duotone" /><span>Home</span></Link> 
                 
-                </li> */}
+                </li>
                  
                 <li>
                 <div className="dropdown"> 

@@ -18,7 +18,15 @@ function Navbar() {
            <Link to ={`/${adminID}/inbox`}><Chat size={32} color="#141414" weight="light" className="Chat-icon-navbar"/></Link>
             
             </div>
-            <div className="item"><img className="avatar" src="https://visualpharm.com/assets/314/Admin-595b40b65ba036ed117d36fe.svg" alt="admin-icon" /></div>
+            <div className="item profile-navbar">
+             
+              <div className="dropdown"> 
+              <img className="avatar" src="https://visualpharm.com/assets/314/Admin-595b40b65ba036ed117d36fe.svg" alt="admin-icon" />
+                  <div className="dropdown-content">
+                <a href="http://192.168.51.89:3000">Logout</a> 
+                </div>
+                </div>
+              </div>
             </div>
             
         </div>

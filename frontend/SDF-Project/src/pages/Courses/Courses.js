@@ -69,6 +69,12 @@ function Courses() {
 		},
 	}
     }
+  
+    useEffect(()=>{
+      genData()
+    },[])
+
+    const [prof,setProf]=useState('')
 
     const dataRef=useRef(null)
     const genData= async ()=>{
@@ -77,9 +83,13 @@ function Courses() {
             d[i]={n:`n${i}`,i:`i${i}`,time:`time${i}`,t:`t${i}`,status:`st${i}`,stud: `s${i}`}
         }
         dataRef.current=d;
-        const resp=await axios.get("http://192.168.51.89/courses")
-        console.log(resp)
-        setData(resp.data.crs)
+        const resp=await axios.get("http://192.168.51.89:5001/courses")
+        const instructor=await axios.get(`http://192.168.51.89:5001/profs/${resp.data[0].profs[0]}`)
+        console.log()
+        setData(resp.data)
+        // console.log(resp.data.prof)
+        console.log(instructor)
+        setProf(instructor.data.username)
         //console.log(dataRef.current)
     }
 
@@ -87,11 +97,11 @@ function Courses() {
     const columns=[
         {
             name: "Course Name",
-            selector: row=>row.name
+            selector: row=>row.description
         },
         {
             name: "Course instructor",
-            selector: row=>row.profs
+            selector: row=>prof
         },
         {
             name: "Start Date",
@@ -141,7 +151,8 @@ function Courses() {
                 fixedHeaderScrollHeight='700px'
                 customStyles={customStyles}
                 highlightOnHover/>
-                {/* <CoursesDatatable/> */}
+                <CoursesDatatable data={data}
+                columns={columns}/>
             </div>
         </div>
       </div>

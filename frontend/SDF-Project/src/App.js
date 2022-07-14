@@ -1,8 +1,8 @@
 import Login from "./components/Login";
-import LoginForm from "./components/LoginForm"
+// import LoginForm from "./components/LoginForm"
 import './App.css'
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Login_2 from "./components/Login_2";
 import Sign_Up_form from "./components/Sign_Up_form";
 import Home from "./pages/Home/Home"
@@ -36,7 +36,7 @@ import NewTA from "./pages/New/NewTA";
 import InboxInstructor from './pages/Inbox/InboxInstructor'
 import SentInstructor from "./pages/Inbox/SentInstructor";
 import ComposeInstructor from "./pages/Inbox/ComposeInstructor";
-
+// import Sign_Up_form from "./components/Sign_Up_form";
 
 function App() {
   return (
@@ -45,15 +45,39 @@ function App() {
         <Routes>
           <Route path="/login" element={ 
             <>
-            <div className="top-login">
-            <Navbar/>
-            </div>
+            <div id="Nav-bar">
+            <ul className="nav-login">
+                <li className="items-nav-login"><a href="http://192.168.51.89:3000">Home</a></li>
+                <li className="items-nav-login"><a href="http://192.168.51.89:3000">Courses</a></li>
+                <li className="items-nav-login"><a href="http://192.168.51.89:3000">About Us</a></li>
+                <li className="items-nav-login"><a href="http://192.168.51.89:3000">Contact</a></li>
+            </ul>
+        </div>
             <div className="main-2">
             <Login_2/>
             </div>
             
             </>
             }>
+          
+
+          </Route>
+          <Route path="/signup" element={
+             <>
+             <div id="Nav-bar">
+             <ul className="nav-login">
+                 <li className="items-nav-login"><a href="http://192.168.51.89:3000">Home</a></li>
+                 <li className="items-nav-login"><a href="http://192.168.51.89:3000">Courses</a></li>
+                 <li className="items-nav-login"><a href="http://192.168.51.89:3000">About Us</a></li>
+                 <li className="items-nav-login"><a href="http://192.168.51.89:3000">Contact</a></li>
+             </ul>
+         </div>
+             <div className="main-2">
+             <Sign_Up_form/>
+             </div>
+             
+             </>
+          }>
 
           </Route>
           <Route path="/:adminID">

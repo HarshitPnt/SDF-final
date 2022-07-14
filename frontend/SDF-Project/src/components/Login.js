@@ -1,6 +1,6 @@
 import React from 'react'
 import './Login.css'
-import {Google} from './images/google.png'
+
 
 function Login() {
   return (

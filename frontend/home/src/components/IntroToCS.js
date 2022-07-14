@@ -30,7 +30,7 @@ function IntroToCS () {
                     </div>
                     <div className='course-data'>
                         <div className='course-discription'>
-                            <h2>Discription</h2>
+                            <h2>Description</h2>
                             <p>This course deals with, What Computer Science is all about<br />
                                     History<br />
                                     basics: hardware, software, mathematics and applications <br />

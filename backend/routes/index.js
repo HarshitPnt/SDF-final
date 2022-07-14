@@ -66,7 +66,7 @@ router.get('/admins', getAllAdmins);
 router.get('/admins/:id', getAdminById);
 router.get('/students', getAllStudents);
 router.get('/students/:id', getStudentById);
-router.get('/:id', add_course_student);
+router.patch('/:id', add_course_student);
 router.get('/courses',getAllCourses);
 router.get('/courses/counts',counts);//New
 router.get('/courses/active', getAllActiveCourses);//New
@@ -82,7 +82,7 @@ router.get('/messages/sent/student/:id',sentMsgsbyId_student);
 router.post('/quiz/add/:id', create_quiz);//New
 router.get('/quiz/:id', get_quiz);//New
 router.get('/profs/course/:id', getCourseByProf);//New
-router.get('/courses/new/:id', new_course);
+router.post('/courses/new/:id', new_course);
 
 console.log("routes setup!");
 export default router;

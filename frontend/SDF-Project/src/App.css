@@ -27,3 +27,27 @@
 .homeContainer{
     margin-left: 160px;
 }
+
+.nav-login{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#Nav-bar{
+  background-color: rgb(229, 218, 218);
+  color: azure;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+.items-nav-login{
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  padding-right: 20px;
+  font-size: 25px;
+}
+.items-nav-login:hover{
+  background-color: brown;
+  
+}

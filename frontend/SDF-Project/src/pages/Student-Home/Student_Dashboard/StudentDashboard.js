@@ -4,8 +4,8 @@ import './studentdashboard.css'
 import CourseCard from '../../../components/courseCard/CourseCard'
 import {ArrowFatLeft,ArrowFatRight,UploadSimple,DownloadSimple} from 'phosphor-react'
 import DataTable from 'react-data-table-component'
-import {useParams} from 'react-router-dom'
-
+import {useParams,useNavigate} from 'react-router-dom'
+import axios from 'axios'
 
 const columns=[
     {
@@ -74,7 +74,20 @@ function StudentDashboard() {
         ref.current.scrollLeft+=shift
     }
 
+    const [name,setName]=useState('')
+    const navigate=useNavigate()
+    const validate=async()=>{
+      let resp=await axios.get(`http://192.168.51.89:5001/students/${studentID}`)
+      console.log(resp.data)
+      if(resp.data.message=="Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"||resp.data==''){
+        navigate('/login')
+      }
+      setName(resp.data.username)
+    }
 
+    useEffect(()=>{
+      validate()
+    },[])
     const customStyles={
         head: {
           style: {
@@ -167,6 +180,11 @@ function StudentDashboard() {
     //   filter
     },[search])
 
+    const getCourses=async()=>{
+      let resp = await axios.get(`http://192.168.51.89:5001/students/${studentID}`)
+      console.log(resp)
+    }
+
     const iRef=useRef(null)
   return (
     <div className="stu-dash" onLoad={
@@ -176,22 +194,22 @@ function StudentDashboard() {
      <Student_sidebar/>    
         </div> 
     <div className="content-stu-dash">
-        <h2 className="welcome-stu-dash">Welcome back {studentID}!</h2>
+        <h2 className="welcome-stu-dash">Welcome back {name}!</h2>
         <h3 className="resume-title">Resume from where you left</h3>
             <div className="resume-bar" id="1" ref={resRef}>
       
                 {/* <img src="" alt="" /> */}
-                <CourseCard title={"Course1"} current={"Current1"}/>
-                <CourseCard title={"Course2"} current={"Current2"}/>
-                <CourseCard title={"Course3"} current={"Current3"}/>
-                <CourseCard title={"Course4"} current={"Current4"}/>
-                <CourseCard title={"Course5"} current={"Current5"}/>
-                <CourseCard title={"Course6"} current={"Current6"}/>
-                <CourseCard title={"Course7"} current={"Current7"}/>
-                <CourseCard title={"Course8"} current={"Current8"}/>
-                <CourseCard title={"Course9"} current={"Current9"}/>
-                <CourseCard title={"Course10"} current={"Current10"}/>
-                <CourseCard title={"Course11"} current={"Current11"}/>
+                <CourseCard state ={"Resume"} link={'http://192.168.51.89:3000/Discrete-Mathematics/Course'} title={"Discrete Mathematics"} current={"Current1"}/>
+                <CourseCard state ={"Resume"} link={'http://192.168.51.89:3000/Introduction-to-CS/Course'} title={"Intro To CS"} current={"Current2"}/>
+                <CourseCard state ={"Resume"} link={'http://192.168.51.89:3000/Practical-physics/Course'} title={"Practical Physics"} current={"Current3"}/>
+                <CourseCard state ={"Resume"} link={'http://192.168.51.89:3000/Introduction-to-C/Course'} title={"Intro To C"} current={"Current4"}/>
+                <CourseCard state ={"Resume"} title={"Course5"} current={"Current5"}/>
+                <CourseCard state ={"Resume"} title={"Course6"} current={"Current6"}/>
+                <CourseCard state ={"Resume"} title={"Course7"} current={"Current7"}/>
+                <CourseCard state ={"Resume"} title={"Course8"} current={"Current8"}/>
+                <CourseCard state ={"Resume"} title={"Course9"} current={"Current9"}/>
+                <CourseCard state ={"Resume"} title={"Course10"} current={"Current10"}/>
+                <CourseCard state ={"Resume"} title={"Course11"} current={"Current11"}/>
             </div>
     <div className="arrows">
             <ArrowFatLeft className="Left-arrow" size={32} color="#812222" weight="duotone" onClick={()=>{scroll(-1500,resRef)}
@@ -216,17 +234,17 @@ function StudentDashboard() {
         </div>
         <h2 className="resume-title recommended-title" >Recommended Courses</h2>
     <div className="recommended-bar resume-bar" ref={recRef} id="2">
-        <CourseCard title={"Course1"} current={"Current1"}/>
-        <CourseCard title={"Course2"} current={"Current2"}/>
-        <CourseCard title={"Course3"} current={"Current3"}/>
-        <CourseCard title={"Course4"} current={"Current4"}/>
-        <CourseCard title={"Course5"} current={"Current5"}/>
-        <CourseCard title={"Course6"} current={"Current6"}/>
-        <CourseCard title={"Course7"} current={"Current7"}/>
-        <CourseCard title={"Course8"} current={"Current8"}/>
-        <CourseCard title={"Course9"} current={"Current9"}/>
-        <CourseCard title={"Course10"} current={"Current10"}/>
-        <CourseCard title={"Course11"} current={"Current11"}/>
+        <CourseCard state ={"Enroll"} title={"Course1"} current={"Current1"}/>
+        <CourseCard state ={"Enroll"} title={"Course2"} current={"Current2"}/>
+        <CourseCard state ={"Enroll"} title={"Course3"} current={"Current3"}/>
+        <CourseCard state ={"Enroll"} title={"Course4"} current={"Current4"}/>
+        <CourseCard state ={"Enroll"} title={"Course5"} current={"Current5"}/>
+        <CourseCard state ={"Enroll"} title={"Course6"} current={"Current6"}/>
+        <CourseCard state ={"Enroll"} title={"Course7"} current={"Current7"}/>
+        <CourseCard state ={"Enroll"} title={"Course8"} current={"Current8"}/>
+        <CourseCard state ={"Enroll"} title={"Course9"} current={"Current9"}/>
+        <CourseCard state ={"Enroll"} title={"Course10"} current={"Current10"}/>
+        <CourseCard state ={"Enroll"} title={"Course11"} current={"Current11"}/>
     </div>
     <div className="arrows rec-arrow">
         <ArrowFatLeft className="Left-arrow" size={32} color="#812222" weight="duotone" onClick={()=>{scroll(-1500,recRef)}

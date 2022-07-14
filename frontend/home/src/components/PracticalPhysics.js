@@ -30,7 +30,7 @@ function PracticalPhysics () {
                     </div>
                     <div className='course-data'>
                         <div className='course-discription'>
-                            <h2>Discription</h2>
+                            <h2>Description</h2>
                             <p>This Course deals with 10 main experiments of Physics.<br />
                             Namely, Young's Modulus of wood using a Strain Gauge,  Rigidity Modulus of a wire using Torsional Pendulum.
                             <br /> Stefa's law and Planck's constant, Principle of superposition using a Cathode Ray Oscilloscope.
